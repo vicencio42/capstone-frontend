@@ -4,16 +4,30 @@
     |
     <router-link to="/about">About</router-link>
     |
-    <router-link to="/signup">Sign Up</router-link>
+    <router-link v-if="!isLoggedIn" to="/signup">Sign Up</router-link>
     |
-    <router-link to="/login">Login</router-link>
+    <router-link v-if="!isLoggedIn" to="/login">Login</router-link>
     |
-    <router-link to="/logout">Logout</router-link>
+    <router-link v-if="isLoggedIn" to="/logout">Logout</router-link>
     |
-    <router-link to="/comics">Manga</router-link>
+    <router-link v-if="isLoggedIn" to="/manga">Manga</router-link>
   </nav>
   <router-view />
 </template>
+<script>
+export default {
+  data: function () {
+    return {
+      isLoggedIn: false,
+    };
+  },
+  watch: {
+    $route: function () {
+      this.isLoggedIn = !!localStorage.jwt;
+    },
+  },
+};
+</script>
 
 <style>
 #app {
@@ -34,6 +48,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ff0000;
 }
 </style>

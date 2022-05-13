@@ -3,6 +3,8 @@ import HomeView from "../views/HomeView.vue";
 import SignupView from "../views/SignupView.vue";
 import LoginView from "../views/LoginView.vue";
 import LogoutView from "../views/LogoutView.vue";
+import MangaView from "../views/MangaView.vue";
+import CardView from "../views/CardView.vue";
 
 const routes = [
   {
@@ -32,6 +34,16 @@ const routes = [
     path: "/logout",
     name: "logout",
     component: LogoutView,
+  },
+  {
+    path: "/manga",
+    name: "manga",
+    component: MangaView,
+  },
+  {
+    path: "/card",
+    name: "card",
+    component: CardView,
   },
 ];
 
