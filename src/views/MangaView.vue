@@ -67,7 +67,7 @@ header {
       color: #313131;
     }
     &:hover {
-      color: #313131;
+      color: #d60a0a;
     }
   }
   .search-box {

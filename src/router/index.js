@@ -3,8 +3,10 @@ import HomeView from "../views/HomeView.vue";
 import SignupView from "../views/SignupView.vue";
 import LoginView from "../views/LoginView.vue";
 import LogoutView from "../views/LogoutView.vue";
+import AboutView from "../views/AboutView.vue";
 import MangaView from "../views/MangaView.vue";
 import CardView from "../views/CardView.vue";
+import WishlistView from "../views/WishlistView.vue";
 
 const routes = [
   {
@@ -15,10 +17,7 @@ const routes = [
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+    component: AboutView,
   },
   {
     path: "/signup",
@@ -44,6 +43,11 @@ const routes = [
     path: "/card",
     name: "card",
     component: CardView,
+  },
+  {
+    path: "/wishlist",
+    name: "wishlist",
+    component: WishlistView,
   },
 ];
 

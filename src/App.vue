@@ -2,15 +2,17 @@
   <nav>
     <router-link to="/">Home</router-link>
     |
-    <router-link to="/about">About</router-link>
+    <router-link v-if="isLoggedIn" to="/about">List of Manga</router-link>
     |
     <router-link v-if="!isLoggedIn" to="/signup">Sign Up</router-link>
+    |
+    <router-link v-if="isLoggedIn" to="/wishlist">Wishlist</router-link>
     |
     <router-link v-if="!isLoggedIn" to="/login">Login</router-link>
     |
     <router-link v-if="isLoggedIn" to="/logout">Logout</router-link>
     |
-    <router-link v-if="isLoggedIn" to="/manga">Manga</router-link>
+    <router-link v-if="isLoggedIn" to="/manga">Browse</router-link>
   </nav>
   <router-view />
 </template>
