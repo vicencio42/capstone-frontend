@@ -13,7 +13,7 @@
     </header>
     <main>
       <div class="cards" v-if="mangalist.length > 0">
-        <CardView v-for="manga in mangalist" :key="manga.mal_id" :manga="manga" />
+        <CardView v-for="manga in mangalist" :key="manga.title" :manga="manga" />
       </div>
       <div class="no-results" v-else></div>
     </main>
@@ -54,20 +54,25 @@ a {
   text-decoration: none;
 }
 header {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-image: url("/Users/vicenciomendez/Actualize/capstone-frontend/public/img/anime/tumblr_q7t7t10FiO1uryzh0o1_1280.webp");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding-top: 100px;
+  padding-bottom: 100px;
   h1 {
-    color: #888;
+    color: rgb(148, 148, 148);
     font-size: 42px;
     font-weight: 400;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 30px;
     strong {
-      color: #313131;
+      color: #d60a0a;
     }
     &:hover {
-      color: #d60a0a;
+      color: #ffffff;
     }
   }
   .search-box {
@@ -84,7 +89,7 @@ header {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
       display: block;
       width: 100%;
-      max-width: 600px;
+      max-width: 500px;
       padding: 15px;
       border-radius: 8px;
       color: #313131;

@@ -79,8 +79,11 @@ main {
   }
 }
 header {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background-image: url("/Users/vicenciomendez/Actualize/capstone-frontend/public/img/anime/1cb.gif");
+  background-position-x: center;
+  background-repeat: no-repeat;
+  padding-top: 82px;
+  padding-bottom: 82px;
   h1 {
     color: #888;
     font-size: 42px;

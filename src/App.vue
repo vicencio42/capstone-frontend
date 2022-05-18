@@ -10,9 +10,9 @@
     |
     <router-link v-if="!isLoggedIn" to="/login">Login</router-link>
     |
-    <router-link v-if="isLoggedIn" to="/logout">Logout</router-link>
-    |
     <router-link v-if="isLoggedIn" to="/manga">Browse</router-link>
+    |
+    <router-link v-if="isLoggedIn" to="/logout">Logout</router-link>
   </nav>
   <router-view />
 </template>
@@ -33,11 +33,13 @@ export default {
 
 <style>
 #app {
+  background-image: url("/Users/vicenciomendez/Actualize/capstone-frontend/public/img/anime/943064.jpg");
+  background-position: center;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 nav {
@@ -46,7 +48,7 @@ nav {
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
 }
 
 nav a.router-link-exact-active {

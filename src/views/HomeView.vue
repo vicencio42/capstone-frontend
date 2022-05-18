@@ -13,33 +13,36 @@ export default {
 
 <template>
   <div class="home">
-    <header>
+    <body>
       <h1>
         The
         <strong>Manga</strong>
         BookClub!
       </h1>
-    </header>
+    </body>
   </div>
 </template>
 
 <style lang="scss" scoped>
-header {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 h1 {
   color: #888;
   font-size: 42px;
   font-weight: 400;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   strong {
     color: #313131;
   }
   &:hover {
     color: #d60a0a;
   }
+}
+body {
+  background-image: url("/Users/vicenciomendez/Actualize/capstone-frontend/public/img/anime/tumblr_nzj7apQciH1v1bvfro1_1280.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 18px;
+  padding-bottom: 700px;
 }
 </style>
